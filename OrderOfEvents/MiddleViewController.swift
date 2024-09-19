@@ -8,13 +8,24 @@
 import UIKit
 
 class MiddleViewController: UIViewController {
-
+    @IBOutlet weak var middleViewLabel: UILabel!
+    @IBOutlet weak var middleViewButton: UIButton!
+    
+    var eventNumber: Int = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    func addEvent(from: String) {
+        if let unwrappedLabel = middleViewLabel.text {
+            middleViewLabel.text = "\(unwrappedLabel)\nEventNumber: \(eventNumber) was \(from)"
+            
+            eventNumber += 1
+        }
+    }
 
     /*
     // MARK: - Navigation
