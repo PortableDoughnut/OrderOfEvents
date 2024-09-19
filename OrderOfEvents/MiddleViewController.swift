@@ -19,12 +19,28 @@ class MiddleViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
     func addEvent(from: String) {
         if let unwrappedLabel = middleViewLabel.text {
             middleViewLabel.text = "\(unwrappedLabel)\nEventNumber: \(eventNumber) was \(from)"
             
             eventNumber += 1
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
     }
 
     /*
