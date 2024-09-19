@@ -15,16 +15,17 @@ class MiddleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        addEvent(from: "viewDidLoad")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        super.viewWillAppear(animated)
+        addEvent(from: "viewWillAppear")
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        super.viewDidAppear(animated)
+        addEvent(from: "viewDidAppear")
     }
     
     func addEvent(from: String) {
@@ -36,11 +37,13 @@ class MiddleViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
+        super.viewWillDisappear(animated)
+        addEvent(from: "viewWillDisappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        
+        super.viewDidDisappear(animated)
+        addEvent(from: "viewDidDisappear")
     }
 
     /*
